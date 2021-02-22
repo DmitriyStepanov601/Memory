@@ -1,2 +1,6 @@
 # Memory
 
+This application is an interpretation of the Memory Card game.
+Memory - one of the most common board games for the development of memory. As you know, memory allows a person to accumulate, store and reproduce information.
+The game begins with a demonstration of a set of cards. They lie "face up" (respectively, the image is down). When you click on any one, the image opens for a few seconds.
+The player's task is to find all the cards with the same pictures. If after opening the first card, you turn over the second card and the pictures match, both cards remain open. If they don't match, the cards are closed again. The task is to open everything.
