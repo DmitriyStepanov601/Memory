@@ -9,22 +9,22 @@ public class Memory extends JFrame {
     private String hiddenCell = "/starWars/33.png";
 
     private static final String TITLE_HELP = "Help";
-    private static final String TXTHELP = "<html><center><H2>Помощь</H2></center><br><center>Игра начинается с " +
-            "демонстрации набора карточек. Они лежат «рубашкой» вверх (соответственно, изображением вниз). " +
-            "Когда вы кликнете по любой,на несколько секунд открывается изображение.<br> Задача игрока — найти все " +
-            "карточки с одинаковыми картинками. Если после открытия первой карты вы переворачиваете вторую и картинки " +
-            "совпадают, обе карточки остаются открытыми. Если не совпадают,карточки снова закрываются. Задача — " +
-            "открыть все.</center></html>";
+    private static final String TXTHELP = "<html><center><H2>Помощь</H2></center><br><center>The game starts with a " +
+            "demonstration of a set of cards. They lie face up (respectively, the image is down). " +
+            "When you click on any one, the image opens for a few seconds.< br> The player's task is to find all the " +
+            "cards with the same pictures. If, after opening the first card, you turn over the second one and the " +
+            "pictures match, both cards remain open. If they don't match,the cards are closed again. Task — " +
+            "open all.</center></html>";
     private static final String TITLE_ABOUT = "About";
-    private static final String TXTABOUT = "<html><center><H2>Об игре</H2></center><br><center>Мемори - одна из " +
-            "самых распространённых настольных игр на развитие памяти. Истоки игры ведут нас в Страну восходящего " +
-            "солнца в период Хэйан (794-1185 годы). Именитое развлечение японской знати — awase (авасе), в " +
-            "переводе «соединение». Среди этих забав существовало и kai-awase (каи-авасе) – игра в ракушки. 360 пар " +
-            "ракушек (от 2,5 до 3 дюймов) составляет полный набор каи-авасе. Снаружи ракушке оставляют её природный " +
-            "вид, а внутри вычищают и окрашивают. Каждую пару ракушек объединяет общий характер. Внутри могут быть " +
-            "нарисованы природа, театральные одеяния, литературные герои, художественные образы, поэтические формы. " +
-            "Ракушки ставили на специальную скатерть-подставку, которая называется kaioke. Идея игры такова, что " +
-            "выигрывает тот участник, который собирает по определенной инструкции наибольшее соответствие пар.<br>" +
+    private static final String TXTABOUT = "<html><center><H2>Об игре</H2></center><br><center>Memory is one of the " +
+            "most common board games for memory development. The origins of the game lead us to the Land of the rising " +
+            "sun in the Heian period (794-1185 years). The famous entertainment of the Japanese nobility is awase (awase), in the " +
+            "translation of connection. Among these amusements there was also kai-awase (kai-awase) – a game of shells. 360 pairs of " +
+            "shells (from 2.5 to 3 inches) make up the complete set of kai-awase. Outside, the shell is left with its natural " +
+            "the view, and the inside is cleaned and painted. Each pair of shells shares a common character. Inside can be " +
+            "drawn nature, theatrical clothing, literary characters, artistic images, poetic forms. " +
+            "Shells were placed on a special tablecloth-stand, which is called kaioke. The idea of the game is that the " +
+            "is won by the participant who collects the greatest match of pairs according to a certain instruction.<br>" +
             "</center></html>";
 
     /**
