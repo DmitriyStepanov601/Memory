@@ -42,6 +42,7 @@ public class CardBoard extends JPanel {
         this.colGrid = colGrid;
         this.NameFolder = NameFolder;
         this.HiddenCell = HiddenCell;
+
         setPreferredSize(new Dimension(1000, 660));
         setBorder(BorderFactory.createEmptyBorder(20, 20, 20, 20));
         setLayout(new GridLayout(rowGrid, colGrid, 5,5));
@@ -49,6 +50,7 @@ public class CardBoard extends JPanel {
         numPair = allCards / 2;
         Cards = new Card[rowGrid][colGrid];
         def = loadImage(HiddenCell);
+
         for (int row = 0; row < rowGrid; row++) {
             for (int column = 0; column < colGrid; column++) {
                 Cards[row][column] = new Card();
@@ -101,6 +103,7 @@ public class CardBoard extends JPanel {
                 }
             }
         }
+
         numOfMatchedPairs = 0;
         numOfPoints = 0;
         mCardStorage = initCardStorage();
@@ -115,6 +118,7 @@ public class CardBoard extends JPanel {
                 }
             }
         }
+
         numOfMatchedPairs = 0;
         numOfPoints = 0;
         loadCardImages();
@@ -126,6 +130,7 @@ public class CardBoard extends JPanel {
         String[] secondPair = new String[numPair];
         int difference = allCards - numPair;
         ArrayList<String> randomCards = new ArrayList<>();
+
         for (int i = 0; i < numPair; i++) {
             while (true) {
                 Random random = new Random();
@@ -138,6 +143,7 @@ public class CardBoard extends JPanel {
                 }
             }
         }
+
         System.arraycopy(firstPair, 0, cardStorage, 0, numPair);
         Collections.shuffle(Arrays.asList(firstPair));
         System.arraycopy(firstPair, 0, secondPair, 0, numPair);
@@ -155,8 +161,10 @@ public class CardBoard extends JPanel {
                     System.err.println("File can't be found!");
                     System.exit(-1);
                 }
+
                 anImage = new ImageIcon(file);
                 Cards[row][column].setIcon(anImage);
+
                 if(Cards[row][column].isEnabled()){
                     Cards[row][column].setIcon(new ImageIcon(def));
                 }
@@ -185,6 +193,7 @@ public class CardBoard extends JPanel {
             System.err.println("It isn't possible to return the location of the card on the Board!");
             return null;
         }
+
         Point p = new Point();
         for (int column = 0; column < rowGrid; column++) {
             for (int row = 0; row < colGrid; row++) {
@@ -214,10 +223,12 @@ public class CardBoard extends JPanel {
     private void showImage(int x, int y) {
         URL file = loadFileImage(NameFolder
                 + mCardStorage[y + (colGrid * x)] + ".png");
+
         if (file == null) {
             System.err.println("File can't be found!");
             System.exit(-1);
         }
+
         ImageIcon anImage = new ImageIcon(file);
         Cards[x][y].setIcon(anImage);
     }
@@ -295,9 +306,12 @@ public class CardBoard extends JPanel {
             secondCard.setMatched(true);
             firstCard.setSelected(false);
             secondCard.setSelected(false);
-            showImage(Objects.requireNonNull(getCardLocation(secondCard)).x, Objects.requireNonNull(getCardLocation(secondCard)).y);
+
+            showImage(Objects.requireNonNull(getCardLocation(secondCard)).x,
+                    Objects.requireNonNull(getCardLocation(secondCard)).y);
             numOfMatchedPairs++;
             numOfPoints += 10;
+
             if(isSolved()){
                 Message();
             }
@@ -306,7 +320,9 @@ public class CardBoard extends JPanel {
             secondCard.setMatched(false);
             firstCard.setSelected(false);
             secondCard.setSelected(false);
-            showImage(Objects.requireNonNull(getCardLocation(secondCard)).x, Objects.requireNonNull(getCardLocation(secondCard)).y);
+
+            showImage(Objects.requireNonNull(getCardLocation(secondCard)).x,
+                    Objects.requireNonNull(getCardLocation(secondCard)).y);
             numOfPoints--;
         }
         selectedCards = 0;

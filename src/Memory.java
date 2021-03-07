@@ -2,29 +2,31 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Memory extends JFrame {
-    public CardBoard Cards;
+    private CardBoard Cards;
     public static Image windowIcon;
     private JFrame moreInform;
     private String nameFolder = "/starWars/";
     private String hiddenCell = "/starWars/33.png";
 
     private static final String TITLE_HELP = "Help";
-    private static final String TXTHELP = "<html><center><H2>Помощь</H2></center><br><center>The game starts with a " +
-            "demonstration of a set of cards. They lie face up (respectively, the image is down). " +
-            "When you click on any one, the image opens for a few seconds.< br> The player's task is to find all the " +
-            "cards with the same pictures. If, after opening the first card, you turn over the second one and the " +
-            "pictures match, both cards remain open. If they don't match,the cards are closed again. Task — " +
-            "open all.</center></html>";
+    private static final String TXTHELP = "<html><center><H2>Помощь</H2></center><br><center>" +
+            "The game starts with a demonstration of a set of cards. They lie face up (respectively, " +
+            "the image is down). When you click on any one, the image opens for a few seconds.<br> " +
+            "The player's task is to find all the cards with the same pictures. If, after opening the " +
+            "first card, you turn over the second one and the pictures match, both cards remain open. " +
+            "If they don't match,the cards are closed again. Task — open all.</center></html>";
     private static final String TITLE_ABOUT = "About";
-    private static final String TXTABOUT = "<html><center><H2>Об игре</H2></center><br><center>Memory is one of the " +
-            "most common board games for memory development. The origins of the game lead us to the Land of the rising " +
-            "sun in the Heian period (794-1185 years). The famous entertainment of the Japanese nobility is awase (awase), in the " +
-            "translation of connection. Among these amusements there was also kai-awase (kai-awase) – a game of shells. 360 pairs of " +
-            "shells (from 2.5 to 3 inches) make up the complete set of kai-awase. Outside, the shell is left with its natural " +
-            "the view, and the inside is cleaned and painted. Each pair of shells shares a common character. Inside can be " +
-            "drawn nature, theatrical clothing, literary characters, artistic images, poetic forms. " +
-            "Shells were placed on a special tablecloth-stand, which is called kaioke. The idea of the game is that the " +
-            "is won by the participant who collects the greatest match of pairs according to a certain instruction.<br>" +
+    private static final String TXTABOUT = "<html><center><H2>Об игре</H2></center><br><center>" +
+            "Memory is one of the most common board games for memory development. The origins of the " +
+            "game lead us to the Land of the rising sun in the Heian period (794-1185 years). The " +
+            "famous entertainment of the Japanese nobility is awase, in the translation of connection. " +
+            "Among these amusements there was also kai-awase – a game of shells. 360 pairs of shells " +
+            "(from 2.5 to 3 inches) make up the complete set of kai-awase. Outside, the shell is " +
+            "left with its natural the view, and the inside is cleaned and painted. Each pair of shells " +
+            "shares a common character. Inside can be drawn nature, theatrical clothing, literary " +
+            "characters, artistic images, poetic forms. Shells were placed on a special tablecloth-stand, " +
+            "which is called kaioke. The idea of the game is that the is won by the participant who " +
+            "collects the greatest match of pairs according to a certain instruction.<br>" +
             "</center></html>";
 
     /**
@@ -85,7 +87,7 @@ public class Memory extends JFrame {
     }
 
     // Creating a form template for help and about the game
-    private void informGame(String name, String text, int width, int height){
+    private void informGame(String name, String text, int width, int height) {
         moreInform = new JFrame(name);
         JLabel txtMessage = new JLabel(text);
         txtMessage.setHorizontalAlignment(SwingConstants.CENTER);
@@ -98,7 +100,7 @@ public class Memory extends JFrame {
         moreInform.add(txtMessage);
     }
 
-    private void addPicture(JFrame MoreInform){
+    private void addPicture(JFrame MoreInform) {
         JLabel jlImage = new JLabel(new ImageIcon(CardBoard.loadImage("/cards.jpg")));
         MoreInform.add(jlImage);
         MoreInform.setLayout(new GridLayout(2, 1));

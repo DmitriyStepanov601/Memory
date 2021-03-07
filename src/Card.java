@@ -10,7 +10,7 @@ public class Card extends JButton {
     private boolean selected = false;
 
     // getters and setters for fields
-    public int getNumberCard(){ return numberCard; }
+    public int getNumberCard() { return numberCard; }
     public void setNumberCard(int num){
         this.numberCard = num;
     }
@@ -23,7 +23,7 @@ public class Card extends JButton {
     }
     public boolean isSelected() { return selected; }
 
-    public boolean sameNumberCard(Card other){
+    public boolean sameNumberCard(Card other) {
         if (other == null) {
             System.err.println("sameType(Card) received null");
             return false;
